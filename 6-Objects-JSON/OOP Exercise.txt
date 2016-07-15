@@ -1,0 +1,27 @@
+driver
+driveID
+name
+number of streets cleared
+miles driven
+
+plow
+amount of snow plowed
+miles driven
+plow()
+drive()
+
+
+Reservations
+arrival date
+checkout date
+room type
+hotel location
+change reservation
+
+
+numsoldiers
+weapon type
+heatlh
+direction
+move()
+fire()
