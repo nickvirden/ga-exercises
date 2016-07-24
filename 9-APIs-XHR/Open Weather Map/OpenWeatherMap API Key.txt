@@ -1,0 +1,6 @@
+53e3f2600e68ea4ea29371f903e21ecc
+
+nickvirden
+23272327
+
+http://api.openweathermap.org/data/2.5/weather?q={{city,state}}&APPID=53e3f2600e68ea4ea29371f903e21ecc

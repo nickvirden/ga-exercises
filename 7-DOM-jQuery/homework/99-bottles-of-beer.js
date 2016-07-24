@@ -2,22 +2,23 @@
 $(function() {
     var $bottlesLeft = $('#bottles'),
         $submitBtn = $('#submit-bottles-btn'),
-        $lyricList = $('#lyric-list');
+        $lyricList = $('#lyric-list'),
+        $bottlesLeft.val() = $bottlesVal;
     
     $submitBtn.on('click', function() {
             
-        if ($bottlesLeft.val().match(/(\d{1,})/g) === null) {
+        if ($bottlesVal.match(/(\d{1,})/g) === null) {
             
             alert("This isn't a number!");
             
-        } else if (($bottlesLeft.val() != "") && ($bottlesLeft.val().match(/(\d{1,})/g)[0] != null)) {
+        } else if (($bottlesVal != "") && ($bottlesVal.match(/(\d{1,})/g)[0] != null)) {
             
-            // console.log($bottlesLeft.val()); // It's a string
+            // console.log($bottlesVal); // It's a string
             
-            parseInt($bottlesLeft.val()); // It's now an integer
+            parseInt($bottlesVal); // It's now an integer
             
             // Iterates over each element in the array returned by the beersOnTheWall function
-            beersOnTheWall($bottlesLeft.val()).forEach(function(index) {
+            beersOnTheWall().forEach(function(index) {
                
                 // Puts the element of the array between <li></li> tags to create list items in the html doc
                 $lyricList.append('<li>' + index + '</li>');
