@@ -36,30 +36,32 @@ Car.prototype.fuelLeft = 24;
 Car.prototype.odometer = 0;
 Car.prototype.driveCar = function(driveMiles) {
     
-    var totalMiles = this.odometer,
-        fuelLeft = this.fuelLeft,
+    var fuelLeft = this.fuelLeft,
         mpg = this.avgMPG;
     
-    // var miles = parseInt(miles);
+    // Check to see if driveMiles is an integer
+    // var driveMiles = parseInt(driveMiles);
     
-    if (typeof(miles) === 'number' && (driveMiles <= mpg*fuelLeft)) {
+    if (typeof(driveMiles) === 'number' && (driveMiles <= mpg*fuelLeft)) {
         
         this.odometer += driveMiles;
-        this.fuelLeft -= (miles / this.avgMPG);
+        this.fuelLeft -= (driveMiles / this.avgMPG);
         
     } else if (driveMiles > mpg*fuelLeft) {
         
-        console.log("You can't drive that far! You don't have enough fuel! You only have " + (mpg*fuelLeft) + " miles left you can drive. :O")
+        console.log("You can't drive " + driveMiles + "! You don't have enough fuel. You only have " + (mpg*fuelLeft) + " miles left you can drive. :O")
+        return;
         
     } else {
         console.log("Uh oh! That ain't a number!");
         return;
     }
     
-    console.log('Drove', miles);
+    console.log('Drove', driveMiles);
     console.log('Odometer', this.odometer);
     console.log('Fuel Left', this.fuelLeft);
     
-    
 }
 
+myCar.driveCar(50);
+myCar.driveCar(1000);
