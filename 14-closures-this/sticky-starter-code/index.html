@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+      html, body {
+          margin: 0;
+          height: 100%;
+          width: 100%;
+      }
+      
+      .container {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+      }
+    
+      .sticky {
+          background: gold;
+          height: 180px;
+          width: 180px;
+          margin: 2px;
+          padding: 20px;
+          font-weight: bold;
+      }
+      
+      #btn {
+          height: 25px;
+          width: 115px;
+      }
+  </style>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- js -->
+  <script src="app.js"></script>
+</head>
+<body>
+    
+    <div style="margin: 5px 5px 5px 5px;">
+        <select>
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="green">Green</option>
+        </select> 
+        <input id="content-field" type="color">
+        <button id="btn">CLICK ME PLZ</button>
+    </div>
+    
+    <input>
+    
+    <div class="container">
+        <div class="sticky">
+            <span class="sticky-number">1. Replace me with your own sticky notes via javascript. The number should increase everytime you add a new sticky.</span>
+        </div>
+    </div>
+</body>
+</html>
